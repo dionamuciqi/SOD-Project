@@ -105,16 +105,6 @@ def create_datasets(img_dir: str, mask_dir: str):
         ds = ds.prefetch(AUTOTUNE)
         return ds 
     
-    def to_dataset(imgs, masks, augment_flag=False):
-        ds = tf.data.Dataset.from_tensor_slices((imgs, masks))
-        ds = ds.map(load_image, num_parallel_calls=AUTOTUNE)
-
-        if augment_flag:
-            ds = ds.map(augment, num_parallel_calls=AUTOTUNE)
-
-            ds = ds.batch(BATCH_SIZE)
-            ds = ds.prefetch(AUTOTUNE)
-            return ds
     train_ds = to_dataset(train_img, train_mask, augment_flag=True)
     val_ds = to_dataset(val_img,val_mask, augment_flag=False)
     test_ds = to_dataset(test_img, test_mask, augment_flag=False)
