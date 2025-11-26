@@ -4,25 +4,24 @@ import numpy as np
 import cv2
 from PIL import Image
 
-# ============================
 # Load Model
-# ============================
+
 MODEL_PATH = "sod_model.h5"
 model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 
-IMG_SIZE = 128  # duhet të jetë identik me trajnim
+IMG_SIZE = 128  
 
-# ============================
+
 # Preprocessing
-# ============================
+
 def preprocess_image(img):
     img = img.resize((IMG_SIZE, IMG_SIZE))
     img = np.array(img).astype("float32") / 255.0
     return img
 
-# ============================
+
 # Predict mask
-# ============================
+
 def predict_mask(img):
     inp = np.expand_dims(img, axis=0)
     pred = model.predict(inp)[0]
