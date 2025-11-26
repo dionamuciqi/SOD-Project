@@ -1,0 +1,4 @@
+# Ignore ECSSD dataset
+data/ECSSD/
+src/sod_model.h5
+*.h5
