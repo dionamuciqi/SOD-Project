@@ -1,38 +1,44 @@
 # Salient Object Detection (SOD) Project
 
-This repository contains my **Salient Object Detection (SOD)** project developed using a deep-learning model based on a U-Net++ architecture.  
-The goal of the project is to detect the most important object in an image by generating a pixel-level saliency mask.
-
-
-
-## What This Project Includes
-
-- **Full Project Report**  
-  A detailed PDF document explaining the dataset, preprocessing, model architecture, training setup, evaluation, and results.
-
-- **Presentation Slides**  
-  A PowerPoint file summarizing the project in a clear and visual way.
-
-- **Source Code**  
-  Python files used for:
-  - dataset loading and preprocessing  
-  - model architecture  
-  - training the model  
-  - evaluating and visualizing predictions  
+This repository contains an end-to-end **Salient Object Detection (SOD)** system built using a custom **U-Net++ deep-learning model** in TensorFlow/Keras.  
+The objective of the project is to generate pixel-level saliency masks that highlight the most important object in an image.
 
 ---
 
-##  Summary of the Project
+##  Project Documentation
 
-- Dataset used: **ECSSD**  
-- Model type: **U-Net++ encoder–decoder**  
-- Framework: **TensorFlow/Keras**  
-- Output: **Predicted saliency masks**  
-- Evaluation metrics: IoU, Precision, Recall, F1 Score  
+You can view the full project files here:
 
-The model successfully learned to highlight the main object in images and produced consistent visual results.
+-  **Final Report (PDF)**  
+   [Open the report](report/Diona%20Muciqi%20SOD.pdf)
 
+-  **Project Presentation (PPTX)**  
+   [Open the presentation](presentation/DionaMuciqi-SOD.pptx)
 
+---
 
+##  What This Project Includes
+
+- **Project Report** — dataset description, preprocessing, model architecture, training setup, evaluation, and results  
+- **Presentation Slides** — summarized visual explanation of the project  
+- **Source Code** — scripts for:
+  - dataset loading & preprocessing  
+  - U-Net++ model construction  
+  - training  
+  - evaluation & visualization  
+
+---
+
+##  Project Summary
+
+- **Dataset:** ECSSD  
+- **Model:** U-Net++ encoder–decoder  
+- **Framework:** TensorFlow / Keras  
+- **Task:** Pixel-wise saliency prediction  
+- **Metrics:** IoU, Precision, Recall, F1 Score  
+
+The trained model successfully learned to detect salient objects and produced consistent, accurate saliency masks on unseen test images.
+
+---
 
 
